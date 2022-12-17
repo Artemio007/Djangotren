@@ -1,0 +1,11 @@
+.type {
+	margin: 10;
+	padding: 10;
+	font-family: 'Arial', sans-serif;
+	font-size: 50px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}

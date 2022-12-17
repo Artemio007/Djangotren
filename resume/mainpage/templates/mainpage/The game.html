@@ -1,0 +1,38 @@
+{% extends 'mainpage/data.html' %}
+
+{% load static %}
+
+{% block css %}
+ <link rel="stylesheet" href="{% static 'css/game.css' %}">
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+
+{% endblock %}
+
+{{% block title %}
+The Game
+{% endblock %}
+
+
+{% block content %}
+
+<h1>fd</h1>
+<p1>моя игра</p1>
+<py-script>
+
+      from random import randint
+
+def generate_random_number():
+    x = randint(0, 10)
+    return x
+
+pyscript.write('lucky', generate_random_number())
+
+
+
+
+
+
+</py-script>
+{% endblock %}

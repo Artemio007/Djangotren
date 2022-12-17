@@ -1,0 +1,39 @@
+{% extends 'mainpage/data.html' %}
+{% load static %}
+{% block head %}
+   <style>
+   body {
+    margin: 30; /* Убираем отступы */
+   }
+   h1 {
+
+    color: #FFFFFF; /* Цвет текста */
+    margin: 0; /* Нулевые отступы вокруг текста */
+    padding: 10px; /* Поля вокруг текста */
+   }
+  </style>
+
+{% endblock %}
+{% block css %}
+ <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{{% block title %}
+Add Reviev
+{% endblock %}
+
+
+{% block content %}
+
+
+<h1>Feedback</h1>
+<h1>Feedback</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.ball }}<br>
+    {{ form.write }}<br>
+<span>{{error}}</span>
+        <button class="btn btn-success" type="submit">Add</button>
+
+</form>
+{% endblock %}
